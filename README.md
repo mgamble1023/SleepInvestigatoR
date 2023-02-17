@@ -29,7 +29,7 @@ E.g. filepath for windows: "C:/Users/Mackenzie/Documents/Test Data" (note: the f
 
 (image on finding file path)
 
-After naming your filepath being careful to maintain the quotes and forward slashes you can highlight the three lines of code under the 'Set working directory...' header
+After naming your filepath being careful to maintain the quotes and forward slashes you can highlight the three lines of code under the 'Set working directory...' header and run
 
 ## Loading SleepInvestigatoR
 
