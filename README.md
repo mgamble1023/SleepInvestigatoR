@@ -42,7 +42,9 @@ Once loaded you can now type into your console: SleepInvestigatoR('User determin
 There are 18 parameters which you can set they are listed below:
 
 1. FileNames
+
    By default FileNames are named FileNames. Just type FileNames = FileNames to be thorough.
+   
 2. file.type
    By default file.type = 'csv' to read .csv files. Change file.type = "Sirenia" if that is what you are using.
 5. epoch.size
