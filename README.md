@@ -1,6 +1,8 @@
 # SleepInvestigatoR
 A function for the analysis of scored rodent sleep
 
+## Overview
+
 ## Download R
 
 ## File Types
@@ -72,15 +74,44 @@ There are 18 parameters which you can set they are listed below:
     
 15. score.value.changer
 
-    SleepInvestigatoR requires sleep-wake to be scored in a 1,2,3 format where 1 = Wake, 2 = NREMS, and 3 = REMS. If you scored your sleep in another format then you can specify which values are Wake, NREMS, and REMS in that order and it will change them into 1,2,3 format. For example, if you score sleep as Wake is equal to 101, NREMS = 102, and REMS = 103 then you would write score.checker = c(101,102,103). By default this is set to 'NULL' and will not run.
+    SleepInvestigatoR requires sleep-wake to be scored in a 1,2,3 format where 1 = Wake, 2 = NREMS, and 3 = REMS. If you scored your sleep in another format then you can specify which values are Wake, NREMS, and REMS in that order and it will change them into 1,2,3 format. For example, if you score sleep as Wake is equal to 101, NREMS = 102, and REMS = 103 then you would write 'score.checker = c(101,102,103)'. By default this is set to 'NULL' and will not run.
    
 17. sleep.adjust
-18. id.factor
-19. group.factor
-20. NREM.cutoff
-21. REM.cutoff
-22. Wake.cutoff
-23. Sleep.cutoff
-24. Propensity.cutoff
-25. data.format
-26. save.name
+
+   sleep.adjust can be used to crop off the beginning of a scored sleep file. There are four options: NREM Onset, REM Onset, Sleep Onset, or a user defined fixed number of epochs. NREM Onset and REM Onset will set truncate each animal's file to start at first NREMS or REMS bout (minimum bout length determined in a different function). Sleep Onset will allow for a combination of NREMS and REMS at the set minimum bout lenght. By defaul this is set to 'NULL' and will not run.
+
+19. id.factor
+
+   By default this is set to TRUE indicating that that the first word in the file name of each file name is the animal id. When set to FALSE the function will create an id to keep track of separate files essentially turning it into a file indicator and not an animal indicator
+
+21. group.factor
+
+   By default this is set to TRUE indicating that the second word in the file name following punctuation (e.g., underscore) is the grouping factor such as treatment or condition. When set to 'FALSE' the group.factor column will be filled with 'NAs'
+
+23. NREM.cutoff
+
+   Sets the mininum number of uninterrupted epochs to be consider a formal bout of NREMS. This is dependent on epoch.size. So if epoch.size is set to 4 seconds then setting 'NREM.cutoff = 15' means that the minimum bout length counted as a NREMS bout is 60 secs. What you set as the cutoff will determine other statistics dependent on bout length. You can set this to 1 so the minimum bout length is equivalent to one epoch. By default this is set to 15.
+
+25. REM.cutoff
+
+See NREM.cutoff for details
+
+27. Wake.cutoff
+
+See NREM.cutoff for details
+
+29. Sleep.cutoff
+
+Similar to other cutoff parameters except this considers NREMS and REMS collapsed so a mixture of the two states can be used to reach the set criterion.
+
+31. Propensity.cutoff
+
+Used to set the cutoff value for minimum bout length in propensity measurements. Value chosen here will be used for **both** states in the propensity measurement. So if looking at the average duration between Wake and NREMS setting 'Propensity.cutoff = 15' with and epoch.size of 4 sec will mean that for the bout to be counted both wake and NREMS will need to be 60 seconds in duration. See NREMS.cutoff for more details.
+
+33. data.format
+
+By default the format is set 'long' and can be set to 'wide' instead allowing for easy input into a variety of statistical programs
+
+35. save.name
+
+Choose a name (put int quotes) for the output to saved as. This .csv file will be placed in the same folder as the sleep scored files. For example, 'save.name = "Test"'.
