@@ -110,7 +110,7 @@ There are 18 parameters which you can set, they are listed below:
 
 **16. Propensity.cutoff**
 
-   Used to set the cutoff value for minimum bout length in propensity measurements. Value chosen here will be used for **both** states in the propensity measurement. So    if looking at the average duration between Wake and NREMS setting 'Propensity.cutoff = 15' with and epoch.size of 4 sec will mean that for the bout to be counted both    wake and NREMS will need to be 60 seconds in duration. See NREMS.cutoff for more details.
+   Used to set the cutoff value for minimum bout length in propensity measurements. Value chosen here will be used for **both** states in the propensity measurement. So    if looking at the average duration between Wake and NREMS setting 'Propensity.cutoff = 15' with and epoch.size of 4 sec will mean that for the bout to be counted both    wake and NREMS will need to be 60 seconds in duration. See NREM.cutoff for more details.
 
 **17. data.format**
 
