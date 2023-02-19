@@ -3,6 +3,8 @@ A function for the analysis of scored rodent sleep
 
 ## Overview
 
+SleepInvestigatoR is a flexible R function used for processing scored rodent sleep. It takes multiple idividual scored sleep files and outputs a single .csv file containing 84 different measures. Sleep can be scored in any software of one's choosing as long as scores are output to a .csv file with no header and contains only three states: Wake, NREMS, and REMS. Lastly, there are several plotting functions incoporated for quick generation of graphics to immediately check the output of the most commonly reported measures.
+
 ## Download R
 
 ## File Types
@@ -43,75 +45,75 @@ Once loaded you can now type into your console: SleepInvestigatoR('User determin
 
 There are 18 parameters which you can set they are listed below:
 
-1. FileNames
+**1. FileNames**
 
    By default FileNames are named FileNames. Just type FileNames = FileNames to be thorough.
    
-2. file.type
+**2. file.type**
 
    By default file.type = 'csv' to read .csv files. Change file.type = "Sirenia" if that is what you are using.
    
-5. epoch.size
+**3. epoch.size**
 
    By default epoch.size = 4 (which is in seconds). Set to the number of seconds you scored in.
    
-7. max.hours
+**4. max.hours**
 
    If max.hours is set to some number then it will truncate all file lengths so they equal this number of hours so all files are consistent. Useful if you want to trim
    excess scored epochs that are irrelevant. By default this is set to 'NULL' and so wont run.
    
-9. byBlocks
+**5. byBlocks**
 
    By default this is set to 'NULL' so won't run. If you change byBlocks = 'some number' it will divide the each file into that many blocks. For example, if all your        files are six hours long then setting byBlocks = 6 will result in hourly data and if set to 3 instead you will have bihourly data. 
    
-11. byTotal
+**6. byTotal**
 
     By default this is set to 'TRUE' which means that it calculates all measures across the entire scored sleep period. For example, if all your files are 12 hours long all measures will be calculated over these 12 hours. Both byBlocks and byTotal are able to be run together producing two outputs one for each.
     
-13. score.checker
+**7. score.checker**
 
     By defualt this is set to 'TRUE'. Score.checker looks for any Wake to REM transitions across all files which under most circumstances is user error. It will stop the fucntion and notify the user what file and where this presumed error occured so it can be corrected. The function will have to be run again. If you are studying narcolepsy, for example, where is behavior is expected score.checker be set to 'FALSE' and it will not flag these transitions as issues.
     
-15. score.value.changer
+**8. score.value.changer**
 
     SleepInvestigatoR requires sleep-wake to be scored in a 1,2,3 format where 1 = Wake, 2 = NREMS, and 3 = REMS. If you scored your sleep in another format then you can specify which values are Wake, NREMS, and REMS in that order and it will change them into 1,2,3 format. For example, if you score sleep as Wake is equal to 101, NREMS = 102, and REMS = 103 then you would write 'score.checker = c(101,102,103)'. By default this is set to 'NULL' and will not run.
    
-17. sleep.adjust
+**9. sleep.adjust**
 
    sleep.adjust can be used to crop off the beginning of a scored sleep file. There are four options: NREM Onset, REM Onset, Sleep Onset, or a user defined fixed number of epochs. NREM Onset and REM Onset will set truncate each animal's file to start at first NREMS or REMS bout (minimum bout length determined in a different function). Sleep Onset will allow for a combination of NREMS and REMS at the set minimum bout lenght. By defaul this is set to 'NULL' and will not run.
 
-19. id.factor
+**10. id.factor**
 
    By default this is set to TRUE indicating that that the first word in the file name of each file name is the animal id. When set to FALSE the function will create an id to keep track of separate files essentially turning it into a file indicator and not an animal indicator
 
-21. group.factor
+**11. group.factor**
 
    By default this is set to TRUE indicating that the second word in the file name following punctuation (e.g., underscore) is the grouping factor such as treatment or condition. When set to 'FALSE' the group.factor column will be filled with 'NAs'
 
-23. NREM.cutoff
+**12. NREM.cutoff**
 
    Sets the mininum number of uninterrupted epochs to be consider a formal bout of NREMS. This is dependent on epoch.size. So if epoch.size is set to 4 seconds then setting 'NREM.cutoff = 15' means that the minimum bout length counted as a NREMS bout is 60 secs. What you set as the cutoff will determine other statistics dependent on bout length. You can set this to 1 so the minimum bout length is equivalent to one epoch. By default this is set to 15.
 
-25. REM.cutoff
+**13. REM.cutoff**
 
 See NREM.cutoff for details
 
-27. Wake.cutoff
+**14. Wake.cutoff**
 
 See NREM.cutoff for details
 
-29. Sleep.cutoff
+**15. Sleep.cutoff**
 
 Similar to other cutoff parameters except this considers NREMS and REMS collapsed so a mixture of the two states can be used to reach the set criterion.
 
-31. Propensity.cutoff
+**16. Propensity.cutoff**
 
 Used to set the cutoff value for minimum bout length in propensity measurements. Value chosen here will be used for **both** states in the propensity measurement. So if looking at the average duration between Wake and NREMS setting 'Propensity.cutoff = 15' with and epoch.size of 4 sec will mean that for the bout to be counted both wake and NREMS will need to be 60 seconds in duration. See NREMS.cutoff for more details.
 
-33. data.format
+**17. data.format**
 
 By default the format is set 'long' and can be set to 'wide' instead allowing for easy input into a variety of statistical programs
 
-35. save.name
+**18. save.name**
 
 Choose a name (put int quotes) for the output to saved as. This .csv file will be placed in the same folder as the sleep scored files. For example, 'save.name = "Test"'.
