@@ -15,8 +15,6 @@ https://rstudio-education.github.io/hopr/starting.html
 
 The most fool proof option is to have all files saved as .csv with no header (see image below). Raw sirenia files are also accepted. By default file.type is set to 'cvs', if the user wants to use raw sirenia files they must change file.type = 'Sirenia'.
 
-(include image)
-
 ## File Naming
 
 For easiest processing of files I reccomend the following naming convention for all scored sleep files: 'AnimalID' / 'id factor'_'Grouping factor' / 'Treatment' / 'Condition'_'whatever else'. Underscores are safest option though it should recognize any punctuation marks between items of the name.
@@ -34,8 +32,6 @@ SleepInvestgatoR uses base R, the data.table package, and tidyverse to perform i
 Lastly, you must designate a filepath which must be the folder name (and associated path) that you put all the scored sleep files in (note no other files can be in this folder)
 
 E.g. filepath for windows: "C:/Users/Mackenzie/Documents/Test Data" (note: the forward slashes)
-
-(image on finding file path)
 
 After naming your filepath being careful to maintain the quotes and forward slashes you can highlight the three lines of code under the 'Set working directory...' header and run
 
