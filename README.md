@@ -5,6 +5,8 @@ A function for the analysis of scored rodent sleep
 
 SleepInvestigatoR is a flexible R function used for processing scored rodent sleep. It takes multiple idividual scored sleep files and outputs a single .csv file containing 84 different measures. Sleep can be scored in any software of one's choosing as long as scores are output to a .csv file with no header and contains only three states: Wake, NREMS, and REMS. Lastly, there are several plotting functions incoporated for quick generation of graphics to immediately check the output of the most commonly reported measures. A link to a video can be found at the bottom of this page running through how the function is used.
 
+Note: I use '' quotes below to indicate what should be typed [as is] **without** quotes and "" double quotes to indicate what needs to be typed **with** quotes in the function. R however does not distinguish between different quotes this is just for the clarity within this document. It should also be said that R is case sensitive and starts at 1 when counting unlike other languages.
+
 ## Download R and R Studio
 
 There are many resources on the internet including videos to help you easily download R. SleepInvestigatoR does not require anything fancy. One resource is provided below:
@@ -13,11 +15,11 @@ https://rstudio-education.github.io/hopr/starting.html
 
 ## File Types
 
-The most fool proof option is to have all files saved as .csv with no header (see image below). Raw sirenia files are also accepted. By default file.type is set to 'cvs', if the user wants to use raw sirenia files they must change file.type = 'Sirenia'.
+The most fool proof option is to have all files saved as .csv with no header (see image below). Raw sirenia files are also accepted. By default 'file.type' is set to 'cvs', if the user wants to use raw sirenia files they must change 'file.type = "Sirenia"'.
 
 ## File Naming
 
-For easiest processing of files I reccomend the following naming convention for all scored sleep files: 'AnimalID' / 'id factor'_'Grouping factor' / 'Treatment' / 'Condition'_'whatever else'. Underscores are safest option though it should recognize any punctuation marks between items of the name.
+For easiest processing of files I reccomend the following naming convention for all scored sleep files: AnimalID' / 'id factor'_'Grouping factor' / 'Treatment' / 'Condition'_'whatever else'. Underscores are safest option though it should recognize any punctuation marks between items of the name.
 
 So example files would read: Mouse1_CondtionA_scores, Mouse1_ConditionB_scores, etc. 
 
@@ -47,24 +49,24 @@ There are 18 parameters which you can set, they are listed below:
 
 **1. FileNames**
 
-   By default FileNames are named FileNames. Just type FileNames = FileNames to be thorough.
+   By default 'FileNames' are named FileNames. Just type 'FileNames = FileNames' to be thorough.
    
 **2. file.type**
 
-   By default file.type = 'csv' to read .csv files. Change file.type = "Sirenia" if that is what you are using.
+   By default 'file.type = "csv"' to read .csv files. Change 'file.type = "Sirenia"' if that is what you are using.
    
 **3. epoch.size**
 
-   By default epoch.size = 4 (which is in seconds). Set to the number of seconds you scored in.
+   By default 'epoch.size = 4' (which is in seconds). Set to the number of seconds you scored in.
    
 **4. max.hours**
 
-   If max.hours is set to some number then it will truncate all file lengths so they equal this number of hours so all files are consistent. Useful if you want to trim
+   If 'max.hours' is set to some number then it will truncate all file lengths so they equal this number of hours so all files are consistent. Useful if you want to trim
    excess scored epochs that are irrelevant. By default this is set to 'NULL' and so wont run.
    
 **5. byBlocks**
 
-   By default this is set to 'NULL' so won't run. If you change byBlocks = 'some number' it will divide the each file into that many blocks. For example, if all your        files are six hours long then setting byBlocks = 6 will result in hourly data and if set to 3 instead you will have bihourly data. 
+   By default this is set to 'NULL' so won't run. If you change 'byBlocks = # (some number)' it will divide the each file into that many blocks. For example, if all your    files are six hours long then setting 'byBlocks = 6' will result in hourly data and if set to 3 instead you will have bihourly data. 
    
 **6. byTotal**
 
@@ -80,15 +82,15 @@ There are 18 parameters which you can set, they are listed below:
    
 **9. sleep.adjust**
 
-   sleep.adjust can be used to crop off the beginning of a scored sleep file. There are four options: NREM Onset, REM Onset, Sleep Onset, or a user defined fixed number    of epochs. NREM Onset and REM Onset will set truncate each animal's file to start at first NREMS or REMS bout (minimum bout length determined in a different              function). Sleep Onset will allow for a combination of NREMS and REMS at the set minimum bout lenght. By defaul this is set to 'NULL' and will not run.
+   sleep.adjust can be used to crop off the beginning of a scored sleep file. There are four options: NREM Onset, REM Onset, Sleep Onset, or a user defined fixed number    of epochs. NREM Onset and REM Onset will set truncate each animal's file to start at first NREMS or REMS bout (minimum bout length determined in a different              function). Sleep Onset will allow for a combination of NREMS and REMS at the set minimum bout lenght. By default this is set to 'NULL' and will not run.
 
 **10. id.factor**
 
-   By default this is set to TRUE indicating that that the first word in the file name of each file name is the animal id. When set to FALSE the function will create an    id to keep track of separate files essentially turning it into a file indicator and not an animal indicator
+   By default this is set to 'TRUE' indicating that that the first word in the file name of each file name is the animal id. When set to FALSE the function will create      an id to keep track of separate files essentially turning it into a file indicator and not an animal indicator
 
 **11. group.factor**
 
-   By default this is set to TRUE indicating that the second word in the file name following punctuation (e.g., underscore) is the grouping factor such as treatment or      condition. When set to 'FALSE' the group.factor column will be filled with 'NAs'
+   By default this is set to TRUE indicating that the second word in the file name following punctuation (e.g., underscore) is the grouping factor such as treatment or      condition. When set to 'FALSE' the group.factor column will be filled with NAs
 
 **12. NREM.cutoff**
 
