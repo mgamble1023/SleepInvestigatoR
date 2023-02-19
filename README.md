@@ -19,7 +19,7 @@ The most fool proof option is to have all files saved as .csv with no header (se
 
 ## File Naming
 
-For easiest processing of files I reccomend the following naming convention for all scored sleep files: AnimalID' / 'id factor'_'Grouping factor' / 'Treatment' / 'Condition'_'whatever else'. Underscores are safest option though it should recognize any punctuation marks between items of the name.
+For easiest processing of files I reccomend the following naming convention for all scored sleep files: AnimalID/id factor_Grouping factor/Treatment/Condition_whatever else. Underscores are safest option though it should recognize any punctuation marks between items of the name.
 
 So example files would read: Mouse1_CondtionA_scores, Mouse1_ConditionB_scores, etc. 
 
