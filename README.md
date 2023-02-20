@@ -126,8 +126,18 @@ There are 18 parameters which you can set, they are listed below:
    
    ### Function
    
+   plot.overview('user defined parameters)
+   
    ### Parameters
+   
+      1. 
 
 ## Video
 
 (link to video/s)
+
+   1. Download script + install and load neessary packages
+   2. File Format, Naming, and Setting Working directory
+   3. Load SleepInvestigatoR + Run
+   4. View output
+   5. Plotting
