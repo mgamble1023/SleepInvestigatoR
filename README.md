@@ -119,7 +119,15 @@ There are 18 parameters which you can set, they are listed below:
 **18. save.name**
 
    Choose a name (put int quotes) for the output to saved as. This .csv file will be placed in the same folder as the sleep scored files. For example, 'save.name =          "Test"'.
+
+## Plotting
+
+   A small plotting function is included on this page for quick and efficient visualization of scored sleep analyzed by SleepInvestigatoR. It plots the most common sleep    sleep measures for a byTotal or byBlock data frame. This includes: percent of each sleep-wake state, latency to NREMS + REMS, state change transition counts, sleep-      wake bout counts, and sleep-wake bout durations. This function allows the user to quickly get a feel for the data to determine if there are possible issues and look      at trends. The graphs for simplicity and ease of fitting on one 'page' mostly omit error margins. This may be changed in future iterations.
    
+   ### Function
+   
+   ### Parameters
+
 ## Video
 
 (link to video/s)
