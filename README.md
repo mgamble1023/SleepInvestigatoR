@@ -5,7 +5,7 @@ A function for the analysis of scored rodent sleep
 
 SleepInvestigatoR is a flexible R function used for processing scored rodent sleep. It takes multiple idividual scored sleep files and outputs a single .csv file containing 84 different measures. Sleep can be scored in any software of one's choosing as long as scores are output to a .csv file with no header and contains only three states: Wake, NREMS, and REMS. Lastly, there are several plotting functions incoporated for quick generation of graphics to immediately check the output of the most commonly reported measures. A link to a video can be found at the bottom of this page running through how the function is used.
 
-Note: I use '' quotes below to indicate what should be typed [as is] **without** quotes and "" double quotes to indicate what needs to be typed **with** quotes in the function. R, however, does not distinguish between different quotes and this dichotomy is just for clarity within this document. It should also be said that R is case sensitive and starts at 1 when counting unlike other languages.
+Note: I use '' quotes below to indicate what should be typed as is **without** quotes and "" double quotes to indicate what needs to be typed **with** quotes in the function. R, however, does not distinguish between different quotes and this dichotomy is just for clarity within this document. It should also be said that R is case sensitive and starts at 1 when counting unlike other languages.
 
 ## Download R and R Studio
 
@@ -17,7 +17,9 @@ https://rstudio-education.github.io/hopr/starting.html
 
 ## File Types
 
-The most fool proof option is to have all files saved as .csv with no header (see video). Raw sirenia files are also accepted. By default 'file.type' is set to 'csv', if the user wants to use raw sirenia files they must change 'file.type = "Sirenia"'.
+The most fool proof option is to have all files saved as .csv with no header (see image). Raw sirenia files are also accepted. By default 'file.type' is set to 'csv', if the user wants to use raw sirenia files they must change 'file.type = "Sirenia"'.
+
+![Model]Images/File_Organization.png
 
 ## File Naming
 
