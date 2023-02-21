@@ -154,7 +154,7 @@ There are 18 parameters which you can set, they are listed below:
 
    1. Download script + install and load necessary packages
    
-   2. File format, naming, and setting working directory
+   2. Setting working directory
    
    3. Load SleepInvestigatoR + run
    
