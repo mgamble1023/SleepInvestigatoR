@@ -144,7 +144,7 @@ There are 18 parameters which you can set, they are listed below:
    
    File Naming and Folder Organization
    
-   ![Model](Images/File_Naming_Folder_Organization.png)
+   ![Model](Images/File_Naming_Folder_Organization.jpg)
    
    Plotting
    
