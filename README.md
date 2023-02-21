@@ -145,6 +145,10 @@ There are 18 parameters which you can set, they are listed below:
    File Naming and Folder Organization
    
    ![Model]()
+   
+   Plotting
+   
+   ![Model]()
 
 ## Videos
 
