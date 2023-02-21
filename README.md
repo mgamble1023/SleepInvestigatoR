@@ -17,9 +17,7 @@ https://rstudio-education.github.io/hopr/starting.html
 
 ## File Types
 
-The most fool proof option is to have all files saved as .csv with no header (see image). Raw sirenia files are also accepted. By default 'file.type' is set to 'csv', if the user wants to use raw sirenia files they must change 'file.type = "Sirenia"'.
-
-![Model]()
+The most fool proof option is to have all files saved as .csv with no header (see bottom of file). Raw sirenia files are also accepted. By default 'file.type' is set to 'csv', if the user wants to use raw sirenia files they must change 'file.type = "Sirenia"'.
 
 ## File Naming
 
@@ -122,6 +120,9 @@ There are 18 parameters which you can set, they are listed below:
 **18. save.name**
 
    Choose a name (put into quotes) for the output to saved as. This .csv file will be placed in the same folder as the sleep scored files. For example, 'save.name =        "Test"'. Be sure to remove the analyzed file from the scored sleep files if you want to run SleepInvestigator again as it will produce an error.
+   
+## Measures
+
 
 ## Plotting
 
@@ -135,12 +136,25 @@ There are 18 parameters which you can set, they are listed below:
    
       1. 
 
-## Video
+## Example Images
 
-(link to video/s)
+   File Organization
+   
+   ![Model]()
+   
+   File Naming and Folder Organization
+   
+   ![Model]()
+
+## Videos
 
    1. Download script + install and load necessary packages
+   
    2. File format, naming, and setting working directory
+   
    3. Load SleepInvestigatoR + run
+   
    4. View output
+   
    5. Plotting
+ 
