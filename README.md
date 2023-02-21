@@ -19,7 +19,7 @@ https://rstudio-education.github.io/hopr/starting.html
 
 The most fool proof option is to have all files saved as .csv with no header (see image). Raw sirenia files are also accepted. By default 'file.type' is set to 'csv', if the user wants to use raw sirenia files they must change 'file.type = "Sirenia"'.
 
-![Model]Images/File_Organization.png
+![Model](Images/File_Organization.png)
 
 ## File Naming
 
