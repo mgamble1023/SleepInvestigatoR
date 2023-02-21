@@ -5,43 +5,45 @@ A function for the analysis of scored rodent sleep
 
 SleepInvestigatoR is a flexible R function used for processing scored rodent sleep. It takes multiple idividual scored sleep files and outputs a single .csv file containing 84 different measures. Sleep can be scored in any software of one's choosing as long as scores are output to a .csv file with no header and contains only three states: Wake, NREMS, and REMS. Lastly, there are several plotting functions incoporated for quick generation of graphics to immediately check the output of the most commonly reported measures. A link to a video can be found at the bottom of this page running through how the function is used.
 
-Note: I use '' quotes below to indicate what should be typed [as is] **without** quotes and "" double quotes to indicate what needs to be typed **with** quotes in the function. R however does not distinguish between different quotes this is just for the clarity within this document. It should also be said that R is case sensitive and starts at 1 when counting unlike other languages.
+Note: I use '' quotes below to indicate what should be typed [as is] **without** quotes and "" double quotes to indicate what needs to be typed **with** quotes in the function. R, however, does not distinguish between different quotes and this dichotomy is just for clarity within this document. It should also be said that R is case sensitive and starts at 1 when counting unlike other languages.
 
 ## Download R and R Studio
 
-There are many resources on the internet including videos to help you easily download R. SleepInvestigatoR does not require anything fancy. One resource is provided below:
+There are many resources on the internet including videos to help you easily download R and R Studio. SleepInvestigatoR does not require anything fancy. 
+
+One resource is provided below:
 
 https://rstudio-education.github.io/hopr/starting.html
 
 ## File Types
 
-The most fool proof option is to have all files saved as .csv with no header (see image below). Raw sirenia files are also accepted. By default 'file.type' is set to 'csv', if the user wants to use raw sirenia files they must change 'file.type = "Sirenia"'.
+The most fool proof option is to have all files saved as .csv with no header (see video). Raw sirenia files are also accepted. By default 'file.type' is set to 'csv', if the user wants to use raw sirenia files they must change 'file.type = "Sirenia"'.
 
 ## File Naming
 
-For easiest processing of files I reccomend the following naming convention for all scored sleep files: AnimalID/id factor_Grouping factor/Treatment/Condition_whatever else. Underscores are safest option though it should recognize any punctuation marks between items of the name.
+For easiest processing of files I reccomend the following naming convention for all scored sleep files: Animal ID/id factor_Grouping factor/Treatment/Condition_whatever else. Underscores are safest option though it should recognize any punctuation marks between items of the name.
 
-So example files would read: Mouse1_CondtionA_scores, Mouse1_ConditionB_scores, etc. 
+Example files would read: Mouse1_CondtionA_scores, Mouse1_ConditionB_scores, etc. 
 
-SleepInvestigator allows you to set either or both id.factor or grouping.factor to 'FALSE' in which case SleepInvestigator will supply NAs for groups and internally delienate animals respectively
+SleepInvestigator allows you to set either or both id.factor or grouping.factor to 'FALSE' in which case SleepInvestigator will supply NAs for groups and internally delienate animals respectively.
 
 ## Before you run SleepInvestigatoR
 
-SleepInvestgatoR uses base R, the data.table package, and tidyverse to perform its operations. These must be installed prior to use if they have **never** been installed before. This only has to be done once using install.packages function. The user can quickly do this by deleting the hashtages before the install.packages functions at the top of the script under the 'Necessary Packages' header and hitting run.
+SleepInvestgatoR uses base R, the data.table package, and tidyverse to perform its operations. These must be installed prior to use if they have **never** been installed before. This only has to be done once using the install.packages function. The user can quickly do this by deleting the hashtages before the install.packages functions at the top of the script under the 'Necessary Packages' header and hitting run.
 
-**Everytime** before you use SleepInvestigatoR you must load the data.table and tidyverse packages by using the library function. Similar to before the user can run these library lines at the top of the script.
+**Everytime** before you use SleepInvestigatoR you must load the data.table and tidyverse packages by using the library function. Similar to before, the user can run these library lines at the top of the script.
 
 Lastly, you must designate a filepath which must be the folder name (and associated path) that you put all the scored sleep files in (note no other files can be in this folder)
 
 E.g. filepath for windows: "C:/Users/Mackenzie/Documents/Test Data" (note: the forward slashes)
 
-After naming your filepath being careful to maintain the quotes and forward slashes you can highlight the three lines of code under the 'Set working directory...' header and run
+After naming your filepath (being careful to maintain the quotes and forward slashes) you can highlight the three lines of code under the 'Set working directory...' header and click run
 
 ## Loading SleepInvestigatoR
 
-Now put your cursor in front of the 'SleepInvestigatoR' function and hit run. This will load the function into R so you can use it and will take a few seconds to complete.
+Now put your cursor in front of the 'SleepInvestigatoR' function and hit run. This will load the function into R so you can use it (this will take a few seconds to complete).
 
-Once loaded you can now type into your console: SleepInvestigatoR('User determined parameters') and hit enter to run the function. See below for parameter options.
+Once loaded you can now type into your console: 'SleepInvestigatoR('User determined parameters')' and hit enter to run the function. See below for parameter options.
 
 ## Parameter options
 
@@ -61,12 +63,11 @@ There are 18 parameters which you can set, they are listed below:
    
 **4. max.hours**
 
-   If 'max.hours' is set to some number then it will truncate all file lengths so they equal this number of hours so all files are consistent. Useful if you want to trim
-   excess scored epochs that are irrelevant. By default this is set to 'NULL' and so wont run.
+   If 'max.hours' is set to some number then it will truncate **all** file lengths so they equal this number of hours so all files are consistent. Useful if you want to    trim excess scored epochs that are irrelevant. By default this is set to 'NULL' and so wont run.
    
 **5. byBlocks**
 
-   By default this is set to 'NULL' so won't run. If you change 'byBlocks = # (some number)' it will divide the each file into that many blocks. For example, if all your    files are six hours long then setting 'byBlocks = 6' will result in hourly data and if set to 3 instead you will have bihourly data. 
+   By default this is set to 'NULL' so it won't run. If you change 'byBlocks = # (some number)' it will divide each file into that many blocks. For example, if all your    files are six hours long then setting 'byBlocks = 6' will result in hourly data and if set to 3 instead you will have bihourly data. 
    
 **6. byTotal**
 
@@ -74,7 +75,7 @@ There are 18 parameters which you can set, they are listed below:
     
 **7. score.checker**
 
-    By default this is set to 'TRUE'. Score.checker looks for any Wake to REM transitions across all files which under most circumstances is user error. It will stop the     fucntion and notify the user what file and where this presumed error occured so it can be corrected. The function will have to be run again. If you are studying         narcolepsy, for example, where is behavior is expected score.checker be set to 'FALSE' and it will not flag these transitions as issues.
+    By default this is set to 'TRUE'. Score.checker looks for any Wake to REM transitions across all files which under most circumstances is user error. It will stop the     function and notify the user what file and where this presumed error occured so it can be corrected. The function will then have to be run again. If you are studying     narcolepsy, for example, where this behavior is expected score.checker can be set to 'FALSE' and it will not flag these transitions as issues.
     
 **8. score.value.changer**
 
@@ -82,15 +83,15 @@ There are 18 parameters which you can set, they are listed below:
    
 **9. sleep.adjust**
 
-   sleep.adjust can be used to crop off the beginning of a scored sleep file. There are four options: NREM Onset, REM Onset, Sleep Onset, or a user defined fixed number    of epochs. NREM Onset and REM Onset will set truncate each animal's file to start at first NREMS or REMS bout (minimum bout length determined in a different              function). Sleep Onset will allow for a combination of NREMS and REMS at the set minimum bout lenght. By default this is set to 'NULL' and will not run.
+   sleep.adjust can be used to crop off the beginning of a scored sleep file. There are four options: 'NREMS Onset', 'REMS Onset', 'Sleep Onset', or a user defined fixed    number of epochs. NREMS Onset and REMS Onset will set truncate each animal's file to start at first NREMS or REMS bout (minimum bout length determined in a different    function). Sleep Onset will allow for a combination of NREMS and REMS at the set minimum bout length. By default this is set to 'NULL' and will not run.
 
 **10. id.factor**
 
-   By default this is set to 'TRUE' indicating that that the first word in the file name of each file name is the animal id. When set to FALSE the function will create      an id to keep track of separate files essentially turning it into a file indicator and not an animal indicator
+   By default this is set to 'TRUE' indicating that that the first word in the file name of each file name is the animal id. When set to 'FALSE' the function will create    an id to keep track of separate files essentially turning it into a file indicator and not an animal indicator
 
 **11. group.factor**
 
-   By default this is set to TRUE indicating that the second word in the file name following punctuation (e.g., underscore) is the grouping factor such as treatment or      condition. When set to 'FALSE' the group.factor column will be filled with NAs
+   By default this is set to 'TRUE' indicating that the second word in the file name following punctuation (e.g., underscore) is the grouping factor such as treatment or    condition. When set to 'FALSE' the group.factor column will be filled with NAs
 
 **12. NREM.cutoff**
 
@@ -110,7 +111,7 @@ There are 18 parameters which you can set, they are listed below:
 
 **16. Propensity.cutoff**
 
-   Used to set the cutoff value for minimum bout length in propensity measurements. Value chosen here will be used for **both** states in the propensity measurement. So    if looking at the average duration between Wake and NREMS setting 'Propensity.cutoff = 15' with and epoch.size of 4 sec will mean that for the bout to be counted both    wake and NREMS will need to be 60 seconds in duration. See NREM.cutoff for more details.
+   Used to set the cutoff value for minimum bout length in propensity measurements. Value chosen here will be used for **both** states in the propensity measurement. So    if looking at the average duration between Wake and NREMS, setting 'Propensity.cutoff = 15' with an epoch.size of 4 sec will mean that for the bout to be counted both    wake and NREMS will need to be 60 seconds in duration. See NREM.cutoff for more details.
 
 **17. data.format**
 
@@ -118,11 +119,11 @@ There are 18 parameters which you can set, they are listed below:
 
 **18. save.name**
 
-   Choose a name (put int quotes) for the output to saved as. This .csv file will be placed in the same folder as the sleep scored files. For example, 'save.name =          "Test"'.
+   Choose a name (put into quotes) for the output to saved as. This .csv file will be placed in the same folder as the sleep scored files. For example, 'save.name =        "Test"'. Be sure to remove the analyzed file from the scored sleep files if you want to run SleepInvestigator again as it will produce an error.
 
 ## Plotting
 
-   A small plotting function is included on this page for quick and efficient visualization of scored sleep analyzed by SleepInvestigatoR. It plots the most common sleep    sleep measures for a byTotal or byBlock data frame. This includes: percent of each sleep-wake state, latency to NREMS + REMS, state change transition counts, sleep-      wake bout counts, and sleep-wake bout durations. This function allows the user to quickly get a feel for the data to determine if there are possible issues and look      at trends. The graphs for simplicity and ease of fitting on one 'page' mostly omit error margins. This may be changed in future iterations.
+   A small plotting function is included as a separate script for quick and efficient visualization of scored sleep analyzed by SleepInvestigatoR. It plots the most        common sleep sleep measures for a byTotal or byBlock data frame. This includes: percent of each sleep-wake state, latency to NREMS + REMS, state change transition        counts, sleep-wake bout counts, and sleep-wake bout durations. This function allows the user to quickly get a feel for the data to determine if there are possible        issues and look at trends. The graphs for simplicity and ease of fitting on one 'page' mostly omit error margins. This may be changed in future iterations.
    
    ### Function
    
@@ -136,8 +137,8 @@ There are 18 parameters which you can set, they are listed below:
 
 (link to video/s)
 
-   1. Download script + install and load neessary packages
-   2. File Format, Naming, and Setting Working directory
-   3. Load SleepInvestigatoR + Run
+   1. Download script + install and load necessary packages
+   2. File format, naming, and setting working directory
+   3. Load SleepInvestigatoR + run
    4. View output
    5. Plotting
