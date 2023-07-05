@@ -43,7 +43,10 @@ After naming your filepath (being careful to maintain the quotes and forward sla
 
 Now put your cursor in front of the 'SleepInvestigatoR' function and hit run. This will load the function into R so you can use it (this will take a few seconds to complete).
 
-Once loaded you can now type into your console: 'SleepInvestigatoR('User determined parameters')' and hit enter to run the function. See below for parameter options.
+
+`SleepInvestigatoR()`
+
+Once loaded you can now type into your console: 'SleepInvestigatoR('User determined parameters')' and hit enter to run the function. See below for parameter options and an example with basic parameters.
 
 ## Parameter options
 
@@ -148,7 +151,12 @@ sleep.adjust can be used to crop off the beginning of a scored sleep file. There
 **25. save.name**
 
    Choose a name (put into quotes) for the output to saved as. This .csv file will be placed in the same folder as the sleep scored files. For example, 'save.name =        "Test"'. Be sure to remove the analyzed file from the scored sleep files if you want to run SleepInvestigator again as it will produce an error.
-   
+
+
+E.g.
+
+`SleepInvestigatoR(FileNames = FileNames, max.hours = 12, byBlocks = 12)`
+
 ## Measures
 
 
