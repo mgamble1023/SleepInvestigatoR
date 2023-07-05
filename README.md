@@ -67,15 +67,15 @@ There are 25 parameters which you can set, they are listed below:
    
 **5. byBlocks**
 
-   By default this is set to 'NULL' so it won't run. If you change 'byBlocks = # (some number)' it will divide each file into that many blocks. For example, if all your    files are six hours long then setting 'byBlocks = 6' will result in hourly data and if set to 3 instead you will have bihourly data. 
+   By default, this is set to 'NULL' so it won't run. If you change 'byBlocks = # (some number)' it will divide each file into that many blocks. For example, if all your    files are six hours long then setting 'byBlocks = 6' will result in hourly data and if set to 3 instead you will have bihourly data. 
    
 **6. byTotal**
 
-    By default this is set to 'TRUE' which means that it calculates all measures across the entire scored sleep period. For example, if all your files are 12 hours long all measures will be calculated over these 12 hours. Both byBlocks and byTotal are able to be run together producing two outputs one for each.
+   By default, this is set to 'TRUE' which means that it calculates all measures across the entire scored sleep period. For example, if all your files are 12 hours long all measures will be calculated over these 12 hours. Both byBlocks and byTotal are able to be run together producing two outputs one for each.
     
 **7. score.checker**
-
-    By default this is set to 'TRUE'. Score.checker looks for any Wake to REM transitions across all files which under most circumstances is user error. It will stop the     function and notify the user what file and where this presumed error occured so it can be corrected. The function will then have to be run again. If you are studying     narcolepsy, for example, where this behavior is expected score.checker can be set to 'FALSE' and it will not flag these transitions as issues.
+   
+   By default, this is set to 'TRUE'. Score.checker looks for any Wake to REM transitions across all files which under most circumstances is user error. It will stop the     function and notify the user what file and where this presumed error occured so it can be corrected. The function will then have to be run again. If you are studying     narcolepsy, for example, where this behavior is expected score.checker can be set to 'FALSE' and it will not flag these transitions as issues.
     
 **8. score.value.changer**
 
