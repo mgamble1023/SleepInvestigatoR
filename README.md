@@ -193,163 +193,163 @@ Dependent on: Sleep cutoff value (minimum length of the time to count as a bout)
 **Latency to Wake from NREMS**
 * Amount of time it takes to start the first wake bout following the first bout of NREMS. 
 
-Related: Latency to Wake from REMS, Latency to Wake from Sleep
+Related: Latency to Wake from REMS, Latency to Wake from Sleep<br>
 Dependent on: Wake and NREMS cutoff values (minimum length of the time to count as a bout)
 
 **Latency to Wake from REMS**
 * Amount of time it takes to start the first wake bout following the first bout of REMS. 
 
-Related: Latency to Wake from NREMS, Latency to Wake from Sleep
+Related: Latency to Wake from NREMS, Latency to Wake from Sleep<br>
 Dependent on: Wake and REMS cutoff values (minimum length of the time to count as a bout)
 
 **Latency to Wake from Sleep**
 * Amount of time it takes to start the first wake bout following the first bout of NREMS/REMS, including mixed NREMS-REMS (sleep). 
 
-Related: Latency to Wake from NREMS, Latency to Wake from REMS
+Related: Latency to Wake from NREMS, Latency to Wake from REMS<br>
 Dependent on: Wake and Sleep cutoff values (minimum length of the time to count as a bout)
 
 **NREMS Onset**
 * Epoch indicating the first bout of NREMS.
 
-Related: REMS Onset, Sleep Onset
+Related: REMS Onset, Sleep Onset<br>
 Dependent on: NREMS cutoff value (minimum length of the time to count as a bout)
 
 **REMS Onset**
 * Epoch indicating the first bout of REMS.
 
-Related: NREMS Onset, Sleep Onset
+Related: NREMS Onset, Sleep Onset<br>
 Dependent on: NREMS cutoff value (minimum length of the time to count as a bout)
 
 **Sleep Onset**
 * Epoch indicating the first bout of sleep (NREMS or REMS, including mixed NREMS-REMS).
 
-Related: NREMS Onset, REMS Onset
+Related: NREMS Onset, REMS Onset<br>
 Dependent on: Sleep cutoff value (minimum length of the time to count as a bout)
 
 **Post-NREMS Wake Onset**
 * Epoch indicating the first bout of wake after the first bout of NREMS
 
-Related: Post-REMS Wake Onset, Post-Sleep Wake Onset
+Related: Post-REMS Wake Onset, Post-Sleep Wake Onset<br>
 Dependent on: NREMS and Wake cutoff values (minimum length of the time to count as a bout)
 
 **Post-REMS Wake Onset**
 * Epoch indicating the first bout of wake after the first bout of REMS
 
-Related: Post-NREMS Wake Onset, Post-Sleep Wake Onset
+Related: Post-NREMS Wake Onset, Post-Sleep Wake Onset<br>
 Dependent on: REMS and Wake cutoff values (minimum length of the time to count as a bout)
 
 **Post-Sleep Wake Onset**
 * Epoch indicating the first bout of wake after the first bout of sleep
 
-Related: Post-NREMS Wake Onset, Post-REMS Wake Onset
+Related: Post-NREMS Wake Onset, Post-REMS Wake Onset<br>
 Dependent on: REMS and Wake cutoff values (minimum length of the time to count as a bout)
 
 **Propensity to enter NREMS**
 * Average duration from the beginning of a bout of wake to a bout of NREMS
 
-Related: Propensity to enter REMS, Propensity to enter sleep
+Related: Propensity to enter REMS, Propensity to enter sleep<br>
 Dependent on: NREMS and Wake cutoff values (minimum length of the time to count as a bout)
 
 **Propensity to enter REMS**
 * Average duration from the beginning of a bout of wake to a bout of REMS
 
-Related: Propensity to enter NREMS, Propensity to enter sleep
+Related: Propensity to enter NREMS, Propensity to enter sleep<br>
 Dependent on: REMS and Wake cutoff values (minimum length of the time to count as a bout)
 
 **Propensity to enter sleep (or inversely propensity to remain awake)**
 * Average duration from the beginning of a bout of wake to a bout of sleep
 
-Related: Propensity to enter NREMS, Propensity to enter REMS
+Related: Propensity to enter NREMS, Propensity to enter REMS<br>
 Dependent on: Sleep and Wake cutoff values (minimum length of the time to count as a bout)
 
 **Propensity to Wake from NREMS (or inversely the propensity to stay in NREMS)**
 * Average duration from the beginning of a bout of NREMS to a bout of wake
 
-Related: Propensity to Wake from REMS, Propensity to Wake from sleep
+Related: Propensity to Wake from REMS, Propensity to Wake from sleep<br>
 Dependent on: NREMS and Wake cutoff values (minimum length of the time to count as a bout)
 
 **Propensity to Wake from REMS (or inversely the propensity to stay REMS)**
 * Average duration from the beginning of a bout of REMS to a bout of wake
 
-Related: Propensity to Wake from NREMS, Propensity to Wake from sleep
+Related: Propensity to Wake from NREMS, Propensity to Wake from sleep<br>
 Dependent on: REMS and Wake cutoff values (minimum length of the time to count as a bout)
 
 **Propensity to Wake from Sleep (or inversely the propensity to stay asleep)**
 * Average duration from the beginning of a bout of sleep to a bout of wake
 
-Related: Propensity to Wake from NREMS, Propensity to Wake from REMS
+Related: Propensity to Wake from NREMS, Propensity to Wake from REMS<br>
 Dependent on: Sleep and Wake cutoff values (minimum length of the time to count as a bout)
 
 **NREMS Onset Bout Length**
 * Length of first bout of NREMS.
 
-Related: REMS Onset Bout Length, Sleep Onset Bout Length
+Related: REMS Onset Bout Length, Sleep Onset Bout Length<br>
 Dependent on: NREMS cutoff value (minimum length of the time to count as a bout)
 
 **REMS Onset Bout Length**
 * Length of first bout of REMS.
 
-Related: NREMS Onset Bout Length, Sleep Onset Bout Length
+Related: NREMS Onset Bout Length, Sleep Onset Bout Length<br>
 Dependent on: REMS cutoff value (minimum length of the time to count as a bout)
 
 **Sleep Onset Bout Length**
 * Length of first bout of sleep (NREMS or REMS, including mixed NREMS-REMS).
 
-Related: NREMS Onset Bout Length, REMS Onset Bout Length
+Related: NREMS Onset Bout Length, REMS Onset Bout Length<br>
 Dependent on: Sleep cutoff value (minimum length of the time to count as a bout)
 
 **Post-NREMS Wake Onset Bout Length**
 * Length of first bout of wake following first NREMS bout.
 
-Related: Post-REMS Wake Onset Bout Length, Post-Sleep Wake Onset Bout Length
+Related: Post-REMS Wake Onset Bout Length, Post-Sleep Wake Onset Bout Length<br>
 Dependent on: NREMS and Wake cutoff values (minimum length of the time to count as a bout)
 
 **Post-REMS Wake Onset Bout Length**
 * Length of first bout of wake following first REMS bout.
 
-Related: Post-NREMS Wake Onset Bout Length, Post-Sleep Wake Onset Bout Length
+Related: Post-NREMS Wake Onset Bout Length, Post-Sleep Wake Onset Bout Length<br>
 Dependent on: REMS and Wake cutoff values (minimum length of the time to count as a bout)
 
 **Post-Sleep Wake Onset Bout Length**
 * Length of first bout of wake following first sleep (NREMS or REMS, including mixed NREMS-REMS) bout.
 
-Related: Post-NREMS Wake Onset Bout Length, Post-REMS Wake Onset Bout Length
+Related: Post-NREMS Wake Onset Bout Length, Post-REMS Wake Onset Bout Length<br>
 Dependent on: Sleep and Wake cutoff values (minimum length of the time to count as a bout)
 
 **NREMS Offset**
 * Last epoch of the last bout of NREMS.
 
-Related: REMS Offset, Sleep Offset
+Related: REMS Offset, Sleep Offset<br>
 Dependent on: NREMS cutoff value (minimum length of the time to count as a bout)
 
 **REMS Offset**
 * Last epoch of the last bout of REMS.
 
-Related: NREMS Offset, Sleep Offset
+Related: NREMS Offset, Sleep Offset<br>
 Dependent on: REMS cutoff value (minimum length of the time to count as a bout)
 
 **Sleep Offset**
 * Last epoch of the last bout of sleep (NREMS or REMS, including mixed NREMS-REMS).
 
-Related: NREMS Offset, REMS Offset
+Related: NREMS Offset, REMS Offset<br>
 Dependent on: Sleep cutoff value (minimum length of the time to count as a bout)
 
 **NREMS Offset Bout Length**
 * Length of last NREMS bout.
 
-Related: REMS Offset Bout Length, Sleep Offset Bout Length
+Related: REMS Offset Bout Length, Sleep Offset Bout Length<br>
 Dependent on: NREMS cutoff value (minimum length of the time to count as a bout)
 
 **REMS Offset Bout Length**
 * Length of last REMS bout. 
 
-Related: NREMS Offset Bout Length, Sleep Offset Bout Length
+Related: NREMS Offset Bout Length, Sleep Offset Bout Length<br>
 Dependent on: REMS cutoff value (minimum length of the time to count as a bout)
 
 **Sleep Offset Bout Length**
 * Length of last bout of Sleep
 
-Related: NREMS Offset Bout Length, REMS Offset Bout Length
+Related: NREMS Offset Bout Length, REMS Offset Bout Length<br>
 Dependent on: Sleep cutoff value (minimum length of the time to count as a bout)
 
 **Wake to NREMS Transition Count**
@@ -359,6 +359,7 @@ Related: Wake-REMS Transition Count, NREMS to Wake Transition Count, NREMS to Wa
 
 **Wake to REMS Transition Count**
 * A count of the number of transitions made from an instance of Wake of any length to an instance of REMS of any length. This measure is not dependent on bout length.
+
 Related: Wake to NREMS Transition Count, NREMS to Wake Transition Count, NREMS to REMS Transition Count, REMS to Wake Transition Count, REMS to NREMS Transition Count
 
 **NREMS to Wake Transition Count**
@@ -399,19 +400,19 @@ Related: Wake Epoch Count, NREMS Epoch Count
 **Wake Seconds**
 * Total number of seconds of Wake
 
-Related: NREMS Seconds, REMS Seconds
+Related: NREMS Seconds, REMS Seconds<br>
 Dependent on: Epoch Size
 
 **NREMS Seconds**
 * Total number of seconds of NREMS 
 
-Related: Wake Seconds, REMS Seconds
+Related: Wake Seconds, REMS Seconds<br>
 Dependent on: Epoch Size
 
 **REMS Seconds**
 * Total number of seconds of REMS
 
-Related: Wake Seconds, NREMS Seconds
+Related: Wake Seconds, NREMS Seconds<br>
 Dependent on: Epoch Size
 
 **Wake Percent**
@@ -434,7 +435,7 @@ Related: Wake Percent, NREMS Percent
    * Not the same as wake epoch count which counts every non-consecutive instance of wake no matter if it proceeds or follows another instance of wake.
    * Result is the same as if you set wake cutoff to 1 for wake bout count.
 
-Related: Microarousal Count
+Related: Microarousal Count<br>
 Other names: Number of awakenings
 
 **Microarousal Count**
@@ -442,102 +443,102 @@ Other names: Number of awakenings
    * E.g., If a bout is user defined as 15 epochs (60 sec if scored at 4 sec) then it will only count bouts of wake less than 15 epochs.
    * If wake cutoff is set to 1 then it will count only bouts equal to cutoff value.
 
-Related: Arousal Count
-Other names: Number of brief awakenings
+Related: Arousal Count<br>
+Other names: Number of brief awakenings<br>
 Dependent on: Wake cutoff value (minimum length of the time to count as a bout)
 
 **Wake Bout Count**
 * Number of Wake bout counts.
 
-Related: NREMS Bout Count, REMS Bout Count, Sleep Bout Count
-Other names: Wake Episode Count
+Related: NREMS Bout Count, REMS Bout Count, Sleep Bout Count<br>
+Other names: Wake Episode Count<br>
 Dependent on: Wake cutoff value (minimum length of the time to count as a bout)
 
 **NREMS Bout Count**
 * Number of NREMS bout counts.
 
-Related: Wake Bout Count, REMS Bout Count, Sleep Bout Count
-Other names: NREMS Episode Count
+Related: Wake Bout Count, REMS Bout Count, Sleep Bout Count<br>
+Other names: NREMS Episode Count<br>
 Dependent on: NREMS cutoff value (minimum length of the time to count as a bout)
 
 **REMS Bout Count**
 * Number of REMS bout counts.
 
-Related: Wake Bout Count, NREMS Bout Count, Sleep Bout Count
-Other names: REMS Episode Count
+Related: Wake Bout Count, NREMS Bout Count, Sleep Bout Count<br>
+Other names: REMS Episode Count<br>
 Dependent on: REMS cutoff value (minimum length of the time to count as a bout)
 
 **Sleep Bout Count**
 * Number of Sleep bout counts.
 
-Related: Wake Bout Count, NREMS Bout Count, REMS Bout Count
-Other names: Sleep Episode Count
+Related: Wake Bout Count, NREMS Bout Count, REMS Bout Count<br>
+Other names: Sleep Episode Count<br>
 Dependent on: Sleep cutoff value (minimum length of the time to count as a bout)
 
 **Avg Wake Bout Duration**
 * Average length of time of a Wake bout.
 
-Related: Avg NREMS Bout Duration, Avg REMS Bout Duration, Avg Sleep Bout Duration
+Related: Avg NREMS Bout Duration, Avg REMS Bout Duration, Avg Sleep Bout Duration<br>
 Dependent on: Wake cutoff value (minimum length of the time to count as a bout)
 
 **Avg NREMS Bout Duration**
 * Average length of time of a NREMS bout.
 
-Related: Avg Wake Bout Duration, Avg REMS Bout Duration, Avg Sleep Bout Duration
+Related: Avg Wake Bout Duration, Avg REMS Bout Duration, Avg Sleep Bout Duration<br>
 Dependent on: NREMS cutoff value (minimum length of the time to count as a bout)
 
 **Avg REMS Bout Duration**
 * Average length of time of a REMS bout. 
 
-Related: Avg Wake Bout Duration, Avg NREMS Bout Duration, Avg Sleep Bout Duration
+Related: Avg Wake Bout Duration, Avg NREMS Bout Duration, Avg Sleep Bout Duration<br>
 Dependent on: REMS cutoff value (minimum length of the time to count as a bout)
 
 **Avg Sleep Bout Duration**
 * Average length of time of a Sleep bout. 
 
-Related: Avg Wake Bout Duration, Avg NREMS Bout Duration, Avg REMS Bout Duration 
+Related: Avg Wake Bout Duration, Avg NREMS Bout Duration, Avg REMS Bout Duration<br>
 Dependent on: Sleep cutoff value (minimum length of the time to count as a bout)
 
 **Avg Wake Interbout Interval**
 * Average length of time between Wake bouts.
 
-Related: Avg NREMS Interbout Interval, Avg REMS Bout Duration 
-Dependent on: Wake cutoff value (minimum length of the time to count as a bout)
+Related: Avg NREMS Interbout Interval, Avg REMS Bout Duration <br>
+Dependent on: Wake cutoff value (minimum length of the time to count as a bout)<br>
 Other names: inter-Wake interval
 
 **Avg NREMS Interbout Interval**
 * Average length of time between NREMS bouts.
 
-Related: Avg Wake Interbout Interval, Avg REMS Bout Duration 
-Dependent on: NREMS cutoff value (minimum length of the time to count as a bout)
+Related: Avg Wake Interbout Interval, Avg REMS Bout Duration<br>
+Dependent on: NREMS cutoff value (minimum length of the time to count as a bout)<br>
 Other names: inter-NREMS interval
 
 **Avg REMS Interbout Interval**
 * Average length of time between REMS bouts.
 
-Related: Avg Wake Interbout Interval, Avg NREMS Bout Duration 
-Dependent on: REMS cutoff value (minimum length of the time to count as a bout)
+Related: Avg Wake Interbout Interval, Avg NREMS Bout Duration<br>
+Dependent on: REMS cutoff value (minimum length of the time to count as a bout)<br>
 Other names: inter-REMS interval
 
 **WASO**
 * Total Recording Time -  Total Sleep Time (aka Total Time Awake) - NREMS Latency
 * Total amount of wake after sleep onset (first sleep bout) 
 
-Related: WASF
+Related: WASF<br>
 Dependent on: Epoch size
 
 **WASF**
 * Total Recording Time -  Sleep Offset
 * Total amt of wake after sleep offset (last bout of sleep, NREMS or REMS)
 
-Related: WASO
+Related: WASO<br>
 Dependent on: Epoch size
 
 **Sleep Fragmentation Index**
 * Arousal Count / Total Time in Sleep 
 
-Related: Arousal Count
-Other names: Arousal Index
+Related: Arousal Count<br>
+Other names: Arousal Index<br>
 Dependent on: Epoch size
 
 **Total Sleep Time**
@@ -553,36 +554,36 @@ Dependent on: Epoch size
 **W/N/RBC (Wake or NREMS or REMS Bout Count)**
 * Wake or NREMS or REMS bout count of set length determined by epoch size as reported by Trachel et al., 1991
 
-Related: Wake Bout Count, NREMS Bout Count, REMS Bout Count
+Related: Wake Bout Count, NREMS Bout Count, REMS Bout Count<br>
 Dependent on: Wake/NREMS/REMS cutoff value (minimum length of the time to count as a bout)
 
-   **W/N/RBC group 1**
-   * Bouts == epoch size
-   * E.g., for epoch size of 4, count all bouts of 4 sec in length (or 1 epoch)<br>
-   **W/N/RBC group 2**
-   * Bouts >= epoch size*2 & < epoch size*4
-   * E.g., For epoch size of 4, count all bouts greater than or equal to 8 sec and less than 16 sec (or bw 2-3 epochs)<br>
-   **W/N/RBC group 3**
-   * Bouts >= epoch size*4 & < epoch size*8,
-   * E.g., For epoch size of 4, count all bouts greater than or equal to 16 sec and less than 32 sec (or bw 4-7 epochs)<br>
-   **W/N/RBC group 4**
-   * Bouts >= epoch size*8 & < epoch size*16
-   * E.g., For epoch size of 4, count all bouts greater than or equal to 32 sec and less than 64 sec (or bw 8-12 epochs)<br>
-   **W/N/RBC group 5**
-   * Bouts >= epoch size*16 & < epoch size*32
-   * E.g., For epoch size of 4, count all bouts greater than or equal to 64 sec and less than 128 sec (or bw 16-28 epochs)<br>
-   **W/N/RBC group 6**
-   * Bouts >= epoch size*32 & < epoch size*64
-   * E.g., For epoch size of 4, count all bouts greater than or equal to 128 sec and less than 256 sec (or bw 32-60 epochs)<br>
-   **W/N/RBC group 7**
-   * Bouts >= epoch size*64 & < epoch size*128
-   * E.g., For epoch size of 4, count all bouts greater than or equal to 256 sec and less than 512 sec (or bw 64-124 epochs)<br>
-   **W/N/RBC group 8**
-   * Bouts >= epoch size*128 & < epoch size*256
-   * E.g., For epoch size of 4, count all bouts greater than or equal to 512 sec and less than 1024 sec (or bw 128-252 epochs)<br>
-   **W/N/RBC group 9**
-   * Bouts >= epoch size*256
-   * E.g., For epoch size of 4, count all bouts greater than 1024 sec (or 256 epochs)
+**W/N/RBC group 1**
+* Bouts == epoch size
+* E.g., for epoch size of 4, count all bouts of 4 sec in length (or 1 epoch)<br>
+**W/N/RBC group 2**
+* Bouts >= epoch size*2 & < epoch size*4
+* E.g., For epoch size of 4, count all bouts greater than or equal to 8 sec and less than 16 sec (or bw 2-3 epochs)<br>
+**W/N/RBC group 3**
+* Bouts >= epoch size*4 & < epoch size*8,
+* E.g., For epoch size of 4, count all bouts greater than or equal to 16 sec and less than 32 sec (or bw 4-7 epochs)<br>
+**W/N/RBC group 4**
+* Bouts >= epoch size*8 & < epoch size*16
+* E.g., For epoch size of 4, count all bouts greater than or equal to 32 sec and less than 64 sec (or bw 8-12 epochs)<br>
+**W/N/RBC group 5**
+* Bouts >= epoch size*16 & < epoch size*32
+* E.g., For epoch size of 4, count all bouts greater than or equal to 64 sec and less than 128 sec (or bw 16-28 epochs)<br>
+**W/N/RBC group 6**
+* Bouts >= epoch size*32 & < epoch size*64
+* E.g., For epoch size of 4, count all bouts greater than or equal to 128 sec and less than 256 sec (or bw 32-60 epochs)<br>
+**W/N/RBC group 7**
+* Bouts >= epoch size*64 & < epoch size*128
+* E.g., For epoch size of 4, count all bouts greater than or equal to 256 sec and less than 512 sec (or bw 64-124 epochs)<br>
+**W/N/RBC group 8**
+* Bouts >= epoch size*128 & < epoch size*256
+* E.g., For epoch size of 4, count all bouts greater than or equal to 512 sec and less than 1024 sec (or bw 128-252 epochs)<br>
+**W/N/RBC group 9**
+* Bouts >= epoch size*256
+* E.g., For epoch size of 4, count all bouts greater than 1024 sec (or 256 epochs)
 
 ## Plotting
 
