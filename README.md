@@ -560,27 +560,35 @@ Dependent on: Wake/NREMS/REMS cutoff value (minimum length of the time to count 
 **W/N/RBC group 1**
 * Bouts == epoch size
 * E.g., for epoch size of 4, count all bouts of 4 sec in length (or 1 epoch)<br>
+
 **W/N/RBC group 2**
-* Bouts >= epoch size*2 & < epoch size*4
+* Bouts >= epoch size x 2 & < epoch size x 4
 * E.g., For epoch size of 4, count all bouts greater than or equal to 8 sec and less than 16 sec (or bw 2-3 epochs)<br>
+
 **W/N/RBC group 3**
-* Bouts >= epoch size*4 & < epoch size*8,
+* Bouts >= epoch size x 4 & < epoch size x 8,
 * E.g., For epoch size of 4, count all bouts greater than or equal to 16 sec and less than 32 sec (or bw 4-7 epochs)<br>
+
 **W/N/RBC group 4**
-* Bouts >= epoch size*8 & < epoch size*16
+* Bouts >= epoch size x 8 & < epoch size x 16
 * E.g., For epoch size of 4, count all bouts greater than or equal to 32 sec and less than 64 sec (or bw 8-12 epochs)<br>
+
 **W/N/RBC group 5**
-* Bouts >= epoch size*16 & < epoch size*32
+* Bouts >= epoch size x 16 & < epoch size x 32
 * E.g., For epoch size of 4, count all bouts greater than or equal to 64 sec and less than 128 sec (or bw 16-28 epochs)<br>
+
 **W/N/RBC group 6**
-* Bouts >= epoch size*32 & < epoch size*64
+* Bouts >= epoch size x 32 & < epoch size x 64
 * E.g., For epoch size of 4, count all bouts greater than or equal to 128 sec and less than 256 sec (or bw 32-60 epochs)<br>
+
 **W/N/RBC group 7**
-* Bouts >= epoch size*64 & < epoch size*128
+* Bouts >= epoch size x 64 & < epoch size x 128
 * E.g., For epoch size of 4, count all bouts greater than or equal to 256 sec and less than 512 sec (or bw 64-124 epochs)<br>
+
 **W/N/RBC group 8**
-* Bouts >= epoch size*128 & < epoch size*256
+* Bouts >= epoch size x 128 & < epoch size x 256
 * E.g., For epoch size of 4, count all bouts greater than or equal to 512 sec and less than 1024 sec (or bw 128-252 epochs)<br>
+
 **W/N/RBC group 9**
 * Bouts >= epoch size*256
 * E.g., For epoch size of 4, count all bouts greater than 1024 sec (or 256 epochs)
