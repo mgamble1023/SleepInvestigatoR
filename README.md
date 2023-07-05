@@ -579,7 +579,7 @@ Dependent on: Wake/NREMS/REMS cutoff value (minimum length of the time to count 
    * E.g., For epoch size of 4, count all bouts greater than or equal to 256 sec and less than 512 sec (or bw 64-124 epochs)
    **W/N/RBC group 8**
    * Bouts >= epoch size*128 & < epoch size*256
-   •	E.g., For epoch size of 4, count all bouts greater than or equal to 512 sec and less than 1024 sec (or bw 128-252 epochs)
+   * E.g., For epoch size of 4, count all bouts greater than or equal to 512 sec and less than 1024 sec (or bw 128-252 epochs)
    **W/N/RBC group 9**
    * Bouts >= epoch size*256
    * E.g., For epoch size of 4, count all bouts greater than 1024 sec (or 256 epochs)
