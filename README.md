@@ -79,11 +79,11 @@ There are 25 parameters which you can set, they are listed below:
     
 **8. score.value.changer**
 
-    SleepInvestigatoR requires sleep-wake to be scored in a 1,2,3 format where 1 = Wake, 2 = NREMS, and 3 = REMS. If you scored your sleep in another format then you can specify which values are Wake, NREMS, and REMS in that order and it will change them into 1,2,3 format. For example, if you score sleep as Wake is equal to 101, NREMS = 102, and REMS = 103 then you would write 'score.checker = c(101,102,103)'. By default this is set to 'NULL' and will not run.
+SleepInvestigatoR requires sleep-wake to be scored in a 1,2,3 format where 1 = Wake, 2 = NREMS, and 3 = REMS. If you scored your sleep in another format then you can specify which values are Wake, NREMS, and REMS in that order and it will change them into 1,2,3 format. For example, if you score sleep as Wake is equal to 101, NREMS = 102, and REMS = 103 then you would write 'score.checker = c(101,102,103)'. By default this is set to 'NULL' and will not run.
    
 **9. sleep.adjust**
 
-   sleep.adjust can be used to crop off the beginning of a scored sleep file. There are four options: 'NREMS Onset', 'REMS Onset', 'Sleep Onset', or a user defined fixed    number of epochs. NREMS Onset and REMS Onset will set truncate each animal's file to start at first NREMS or REMS bout (minimum bout length determined in a different    function). Sleep Onset will allow for a combination of NREMS and REMS at the set minimum bout length. By default this is set to 'NULL' and will not run.
+sleep.adjust can be used to crop off the beginning of a scored sleep file. There are four options: 'NREMS Onset', 'REMS Onset', 'Sleep Onset', or a user defined fixed number of epochs. NREMS Onset and REMS Onset will set truncate each animal's file to start at first NREMS or REMS bout (minimum bout length determined in a different function). Sleep Onset will allow for a combination of NREMS and REMS at the set minimum bout length. By default this is set to 'NULL' and will not run.
 
 **10. id.factor**
 
