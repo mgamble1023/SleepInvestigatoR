@@ -47,7 +47,7 @@ Once loaded you can now type into your console: 'SleepInvestigatoR('User determi
 
 ## Parameter options
 
-There are 18 parameters which you can set, they are listed below:
+There are 25 parameters which you can set, they are listed below:
 
 **1. FileNames**
 
@@ -63,7 +63,7 @@ There are 18 parameters which you can set, they are listed below:
    
 **4. max.hours**
 
-   If 'max.hours' is set to some number then it will truncate **all** file lengths so they equal this number of hours so all files are consistent. Useful if you want to    trim excess scored epochs that are irrelevant. By default this is set to 'NULL' and so wont run.
+   If 'max.hours' is set to some number then it will truncate **all** file lengths so they equal this number of hours so all files are consistent. Useful if you want to trim excess scored epochs that are irrelevant. By default this is set to 'NULL' and so wont run.
    
 **5. byBlocks**
 
@@ -71,7 +71,7 @@ There are 18 parameters which you can set, they are listed below:
    
 **6. byTotal**
 
-    By default this is set to 'TRUE' which means that it calculates all measures across the entire scored sleep period. For example, if all your files are 12 hours long     all measures will be calculated over these 12 hours. Both byBlocks and byTotal are able to be run together producing two outputs one for each.
+    By default this is set to 'TRUE' which means that it calculates all measures across the entire scored sleep period. For example, if all your files are 12 hours long all measures will be calculated over these 12 hours. Both byBlocks and byTotal are able to be run together producing two outputs one for each.
     
 **7. score.checker**
 
@@ -79,7 +79,7 @@ There are 18 parameters which you can set, they are listed below:
     
 **8. score.value.changer**
 
-    SleepInvestigatoR requires sleep-wake to be scored in a 1,2,3 format where 1 = Wake, 2 = NREMS, and 3 = REMS. If you scored your sleep in another format then you can     specify which values are Wake, NREMS, and REMS in that order and it will change them into 1,2,3 format. For example, if you score sleep as Wake is equal to 101,         NREMS = 102, and REMS = 103 then you would write 'score.checker = c(101,102,103)'. By default this is set to 'NULL' and will not run.
+    SleepInvestigatoR requires sleep-wake to be scored in a 1,2,3 format where 1 = Wake, 2 = NREMS, and 3 = REMS. If you scored your sleep in another format then you can specify which values are Wake, NREMS, and REMS in that order and it will change them into 1,2,3 format. For example, if you score sleep as Wake is equal to 101, NREMS = 102, and REMS = 103 then you would write 'score.checker = c(101,102,103)'. By default this is set to 'NULL' and will not run.
    
 **9. sleep.adjust**
 
@@ -93,31 +93,59 @@ There are 18 parameters which you can set, they are listed below:
 
    By default this is set to 'TRUE' indicating that the second word in the file name following punctuation (e.g., underscore) is the grouping factor such as treatment or    condition. When set to 'FALSE' the group.factor column will be filled with NAs
 
-**12. NREM.cutoff**
+**12. normalization**
 
-   Sets the mininum number of uninterrupted epochs to be consider a formal bout of NREMS. This is dependent on epoch.size. So if epoch.size is set to 4 seconds then        setting 'NREM.cutoff = 15' means that the minimum bout length counted as a NREMS bout is 60 secs. What you set as the cutoff will determine other statistics dependent    on bout length. You can set this to 1 so the minimum bout length is equivalent to one epoch. By default this is set to 15.
+   By default this is set to 'FALSE' when given the condition name of a basleine line recording (e.g., BL) it calculates all measures normalized to this baseline
 
-**13. REM.cutoff**
+**13. time stamp**
+
+   By default is set to 'FALSE' when set to 'TRUE' indicates that that time stamped bouts are present and that you want to calculate relevant metrics from these time stamps (e.g., ZTs).
+
+**14. time separator**
+
+   Indicates the format times are provided in the time stamps. By default it is set to hh:mm:ss
+
+**15. date format**
+
+   Indicates the format dates are provided in the time stamps. By default it is set to m/d/y.
+
+**16. date separator**
+
+   The variable used to separate date and time in the provided time stamps. By default is set to '' (represents space)
+   
+**17. lights on**
+
+   The local clock time in the time stamps that the lgihts turn on.
+   
+**18. lights off**
+
+   The loca clock time in the time stamps that the lights turn off. 
+   
+**19. NREM.cutoff**
+
+   Sets the mininum number of uninterrupted epochs to be consider a formal bout of NREMS. This is dependent on epoch.size. So if epoch.size is set to 4 seconds then setting 'NREM.cutoff = 15' means that the minimum bout length counted as a NREMS bout is 60 secs. What you set as the cutoff will determine other statistics dependent on bout length. You can set this to 1 so the minimum bout length is equivalent to one epoch. By default this is set to 15.
+
+**20. REM.cutoff**
 
    See NREM.cutoff for details
 
-**14. Wake.cutoff**
+**21. Wake.cutoff**
 
    See NREM.cutoff for details
 
-**15. Sleep.cutoff**
+**22. Sleep.cutoff**
 
    Similar to other cutoff parameters except this considers NREMS and REMS collapsed so a mixture of the two states can be used to reach the set criterion.
 
-**16. Propensity.cutoff**
+**23. Propensity.cutoff**
 
-   Used to set the cutoff value for minimum bout length in propensity measurements. Value chosen here will be used for **both** states in the propensity measurement. So    if looking at the average duration between Wake and NREMS, setting 'Propensity.cutoff = 15' with an epoch.size of 4 sec will mean that for the bout to be counted both    wake and NREMS will need to be 60 seconds in duration. See NREM.cutoff for more details.
+   Used to set the cutoff value for minimum bout length in propensity measurements. Value chosen here will be used for **both** states in the propensity measurement. So if looking at the average duration between Wake and NREMS, setting 'Propensity.cutoff = 15' with an epoch.size of 4 sec will mean that for the bout to be counted both wake and NREMS will need to be 60 seconds in duration. See NREM.cutoff for more details.
 
-**17. data.format**
+**24. data.format**
 
    By default the format is set 'long' and can be set to 'wide' instead allowing for easy input into a variety of statistical programs
 
-**18. save.name**
+**25. save.name**
 
    Choose a name (put into quotes) for the output to saved as. This .csv file will be placed in the same folder as the sleep scored files. For example, 'save.name =        "Test"'. Be sure to remove the analyzed file from the scored sleep files if you want to run SleepInvestigator again as it will produce an error.
    
@@ -126,7 +154,7 @@ There are 18 parameters which you can set, they are listed below:
 
 ## Plotting
 
-   A small plotting function is included as a separate script for quick and efficient visualization of scored sleep analyzed by SleepInvestigatoR. It plots the most        common sleep sleep measures for a byTotal or byBlock data frame. This includes: percent of each sleep-wake state, latency to NREMS + REMS, state change transition        counts, sleep-wake bout counts, and sleep-wake bout durations. This function allows the user to quickly get a feel for the data to determine if there are possible        issues and look at trends. The graphs for simplicity and ease of fitting on one 'page' mostly omit error margins. This may be changed in future iterations.
+   A small plotting function is included as a separate script for quick and efficient visualization of scored sleep analyzed by SleepInvestigatoR. It plots the most common sleep sleep measures for a byTotal or byBlock data frame. This includes: percent of each sleep-wake state, latency to NREMS + REMS, state change transition counts, sleep-wake bout counts, and sleep-wake bout durations. This function allows the user to quickly get a feel for the data to determine if there are possible issues and look at trends. The graphs for simplicity and ease of fitting on one 'page' mostly omit error margins. This may be changed in future iterations.
    
    ### Function
    
