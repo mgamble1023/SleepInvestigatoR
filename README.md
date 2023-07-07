@@ -43,7 +43,12 @@ After naming your filepath (being careful to maintain the quotes and forward sla
 
 Now put your cursor in front of the 'SleepInvestigatoR' function and hit run. This will load the function into R so you can use it (this will take a few seconds to complete). It will look like the below.
 
-`SleepInvestigatoR()`
+`SleepInvestigatoR <- function(FileNames, file.type = "csv", epoch.size = 4, max.hours = NULL, byBlocks = NULL, byTotal = TRUE, 
+                              score.checker = T, id.factor = TRUE, group.factor = TRUE, normalization = NULL, time.stamp = F, 
+                              scores.column = 1, lights.on = NULL, lights.off = NULL, time.format = "hh:mm:ss", date.format = 'm/d/y', 
+                              date.time.separator = '', score.value.changer = NULL, sleep.adjust = NULL, NREM.cutoff = 15, 
+                              REM.cutoff = 15, Wake.cutoff = 15, Sleep.cutoff = 15, Propensity.cutoff = 15, data.format = "long", 
+                              save.name = NULL){`
 
 Once loaded you can now type into your console: 'SleepInvestigatoR('User determined parameters')' and hit enter to run the function. See below for parameter options and an example with basic parameters.
 
@@ -156,7 +161,17 @@ E.g.
 
 `SleepInvestigatoR(FileNames = FileNames, max.hours = 12, byBlocks = 12)`
 
-This will produce data hourly for 12 hours.
+This will produce data hourly for 12 hours. It nothing else is specified it assumes that epochs are 4 sec and latency cut offs are 1 min. Additionally, the data format is output in long format (see images at end for what this looks like)
+
+`SleepInvestigatoR(FileNames = FileNames, max.hours = 12, byBlocks = 12, epoch.size = 10, NREM.cutoff = 3, 
+                              REM.cutoff = 3, Wake.cutoff = 3, Sleep.cutoff = 3, Propensity.cutoff = 3)`
+
+This adjustment now assumes that you have hourly data for 12 hours where each epoch is 10 seconds and the latency cut offs are 30 sec. 
+
+`SleepInvestigatoR(FileNames = FileNames, max.hours = 12, byBlocks = 12, time.stamp = T, scores.column = 1, lights.on = NULL, 
+                              lights.off = NULL, time.format = "hh:mm:ss", date.format = 'm/d/y', date.time.separator = '')`
+
+This adjusment is same as the first but it indicates there is time information that you would like to be incoporated to calculate things like ZTs. Specifically, time.stamp set to TRUE or T indicates there are time stamps, scores.column tells the code whether the sleep scores are in the first or second column (the opposing column is assumed to hold the time infomation), lights.on + lights.off indicates clock time the light turn on and off respectively, time.format and date.format tell the function how this information will be presented, and lastly date.time.separator tells the function what variable separates the date and time information (space, underscores, etc). An example of time stamped data is provided at the end.
 
 ## Measures
 
