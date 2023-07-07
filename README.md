@@ -21,9 +21,10 @@ The most fool proof option is to have all files saved as .csv with no header (se
 
 ## File Naming
 
-For easiest processing of files I reccomend the following naming convention for all scored sleep files: Animal ID/id factor_Grouping factor/Treatment/Condition_Animal Sex_Cohort_Age_whatever else. Underscores are safest option though it should recognize any punctuation marks between items of the name. For Sex, Cohort, and Age an 'NA' can be placed instead if that information is not present.
+For easiest processing of files I reccomend the following naming convention for all scored sleep files: Animal ID/id factor_Grouping factor/Treatment/Condition_Animal Sex_Cohort_Age_whatever else. Underscores are safest option though it should recognize any punctuation marks between items of the name. For Sex, Cohort, and Age an 'NA' can be placed instead if that information is not present. Example images of file names are provided at end.
 
-Example files would read: Mouse1_CondtionA_Male_Cohort1_6mo_scores, Mouse1_ConditionB_Female_Cohort1_6mo_scores, etc. 
+Example files would read:
+Mouse1_CondtionA_Male_Cohort1_6mo_scores, Mouse1_ConditionB_Female_Cohort1_6mo_scores, etc. 
 
 SleepInvestigator allows you to set either or both id.factor or grouping.factor to 'FALSE' in which case SleepInvestigator will supply NAs for groups and internally delienate animals respectively.
 
