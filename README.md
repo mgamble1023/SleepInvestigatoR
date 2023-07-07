@@ -652,8 +652,8 @@ Dependent on: Wake/NREMS/REMS cutoff value (minimum length of the time to count 
    
    ![Model](Images/File_Naming_Folder_Organization.jpg)
    
-   Plotting
+   Time Stamped Data Example (date format: m:dd:yyy time format: hh:mm:ss)
    
-   ![Model]()
+   ![Model](Images/Time_Stamped_Data.jpg)
 
  
