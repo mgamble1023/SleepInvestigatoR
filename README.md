@@ -1,6 +1,8 @@
 # SleepInvestigatoR
 A function for the analysis of scored rodent sleep
 
+//UNDER ACTIVE DEVELOPMENT// check back soon.
+
 ## Overview
 
 SleepInvestigatoR is a flexible R function used for processing scored rodent sleep. It takes multiple idividual scored sleep files and outputs a single .csv file containing 84 different measures. Sleep can be scored in any software of one's choosing as long as scores are output to a .csv file with no header and contains only three states: Wake, NREMS, and REMS. Lastly, there is a separate plotting function incoporated for quick generation of graphics to immediately check the output of the most commonly reported measures. 
