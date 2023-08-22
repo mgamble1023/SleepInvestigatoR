@@ -1,7 +1,7 @@
 # SleepInvestigatoR
 A function for the analysis of scored rodent sleep
 
-//UNDER ACTIVE DEVELOPMENT// check back soon.
+UNDER ACTIVE DEVELOPMENT check back soon.
 
 ## Overview
 
