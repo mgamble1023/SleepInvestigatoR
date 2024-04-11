@@ -28,7 +28,7 @@ For easiest processing of files I reccomend the following naming convention for 
 Example files would read:
 Mouse1_CondtionA_Male_Cohort1_6mo_scores, Mouse1_ConditionB_Female_Cohort1_6mo_scores, etc. 
 
-SleepInvestigator allows you to set either or both id.factor or grouping.factor to 'FALSE' in which case SleepInvestigator will supply NAs for groups and internally delienate animals respectively.
+SleepInvestigator allows you to individually set both id.factor or grouping.factor to 'FALSE' in which case SleepInvestigator will supply NAs for groups and internally delienate animals respectively.
 
 ## Before you run SleepInvestigatoR
 
