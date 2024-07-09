@@ -117,7 +117,7 @@ sleep.adjust can be used to crop off the beginning of a scored sleep file. There
 
 **15. date format**
 
-   Indicates the format dates are provided in the time stamps. By default it is set to m/d/y.
+   Indicates the format dates are provided in the time stamps. By default it is set to m/d/y (which generally should would work for mm/dd/yyyy, mm/dd/yy, etc)
 
 **16. date separator**
 
@@ -125,11 +125,11 @@ sleep.adjust can be used to crop off the beginning of a scored sleep file. There
    
 **17. lights on**
 
-   The local clock time in the time stamps that the lgihts turn on.
+   The local clock time in the time stamps that the lgihts turn on. *This needs to be put in qoutation marks within the function to run properly*
    
 **18. lights off**
 
-   The loca clock time in the time stamps that the lights turn off. 
+   The loca clock time in the time stamps that the lights turn off. *This needs to be put in qoutation marks within the function to run properly*
    
 **19. NREM.cutoff**
 
