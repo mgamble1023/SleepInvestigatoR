@@ -553,7 +553,8 @@ Related: WASO<br>
 Dependent on: Epoch size
 
 **Sleep Fragmentation Index**
-* Arousal Count / Total Time in Sleep 
+* Arousal Count / (Total Time in Sleep / 60)
+* Number of arousals per minute of sleep
 
 Related: Arousal Count<br>
 Other names: Arousal Index<br>
