@@ -1,7 +1,7 @@
 # SleepInvestigatoR
 A function for the analysis of scored rodent sleep
 
-UNDER ACTIVE DEVELOPMENT check back soon.
+UNDER REVIEW, new version available soon.
 
 ## Overview
 
@@ -19,7 +19,11 @@ https://rstudio-education.github.io/hopr/starting.html
 
 ## File Types
 
-The most fool proof option is to have all files saved as .csv with no header (see bottom of page). Sirenia (pinnacle) files are also accepted. By default 'file.type' is set to 'csv', if the user wants to use raw sirenia files they must change 'file.type = "Sirenia"'.
+The most fool proof option is to have all files saved as .csv with no header (see bottom of page). Sirenia (pinnacle) files are also accepted. By default 'file.type' is set to 'csv', if the user wants to use raw sirenia files they must change 'file.type = "Sirenia"'. The dfeualt, .csv files, is considered the most stable as the Sirenia formatting is subject to change by Pinnacle.
+
+## Pre-Processing
+
+SleepInvestigatoR requires a completely scored sleep file to run. All scores must be coded into wake, NREMS, and REMS designaited as 1, 2, and 3 respectively. If a numerical system other than this is used the user may manually change it or use the built-in 'score.value.changer' (see below). If missing, corrupted, or otherwise artficat-predominant epochs are not converted into one of the three vigilance states then SleepInvestigatoR will not run and notify the user that scoring is not in the correct format. Any interperolation or correction must occur before processing the files. 
 
 ## File Naming
 
