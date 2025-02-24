@@ -197,7 +197,7 @@ This adjusment is same as the first but it indicates there is time information t
 **Latency to NREMS**
 * Amount of time before the first bout of NREMS 
 
-Related: Latency to REMS, Latency to Sleep
+Related: Latency to REMS, Latency to Sleep                                                                                                                                          
 Dependent on: NREMS cutoff value (minimum length of the time to count as a bout)
 
 **Latency to REMS**
