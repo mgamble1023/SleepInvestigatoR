@@ -109,7 +109,7 @@ sleep.adjust can be used to crop off the beginning of a scored sleep file. There
 
 **12. normalization**
 
-   By default this is set to 'FALSE' when given the condition name of a basleine line recording (e.g., BL) it calculates all measures normalized to this baseline
+   By default this is set to 'NULL' when given the condition name of a basleine line recording (e.g., BL) it calculates all measures normalized to this baseline
 
 **13. time stamp**
 
