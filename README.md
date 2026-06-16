@@ -129,11 +129,11 @@ sleep.adjust can be used to crop off the beginning of a scored sleep file. There
    
 **17. lights on**
 
-   The local clock time in the time stamps that the lgihts turn on. *This needs to be put in qoutation marks within the function to run properly*
+   24hr local clock time in the time stamps that the lgihts turn on. *This needs to be put in qoutation marks within the function to run properly*
    
 **18. lights off**
 
-   The loca clock time in the time stamps that the lights turn off. *This needs to be put in qoutation marks within the function to run properly*
+   24hr clock time in the time stamps that the lights turn off. *This needs to be put in qoutation marks within the function to run properly*
    
 **19. NREM.cutoff**
 
